@@ -1,0 +1,30 @@
+risk_id: R-005
+title: Third-party vendor trusted relationship abuse
+description: >
+  Attackers compromise a third-party SaaS vendor or integration with
+  trusted access to NimbusLedger systems, using that relationship to
+  reach customer data or production infrastructure.
+business_impact: high
+likelihood: medium
+impact_value: 4
+likelihood_value: 3
+inherent_risk_score: 12
+attack_techniques:
+  - id: T1199
+    name: Trusted Relationship
+    tactic: Initial Access (TA0001)
+mitigating_controls:
+  - id: SA-9
+    name: External System Services
+    implemented: partial
+  - id: CA-3
+    name: Information Exchange
+    implemented: no
+  - id: RA-3
+    name: Risk Assessment
+    implemented: yes
+coverage_score: 0.5
+residual_risk_score: 6
+owner: CISO
+status: monitoring
+last_reviewed: 2026-05-28
