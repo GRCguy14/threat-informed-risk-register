@@ -1,0 +1,35 @@
+risk_id: R-001
+title: Phishing attack compromises employee credentials
+description: >
+  Attackers phish NimbusLedger employees to steal Okta SSO credentials,
+  enabling unauthorized access to the AWS console and customer PII.
+business_impact: high
+likelihood: high
+impact_value: 4
+likelihood_value: 4
+inherent_risk_score: 16
+attack_techniques:
+  - id: T1566
+    name: Phishing
+    tactic: Initial Access (TA0001)
+  - id: T1566.001
+    name: Spearphishing Attachment
+    tactic: Initial Access (TA0001)
+mitigating_controls:
+  - id: AT-2
+    name: Security Awareness Training
+    implemented: yes
+  - id: IA-2(1)
+    name: MFA for Privileged Accounts
+    implemented: yes
+  - id: SI-3
+    name: Malicious Code Protection
+    implemented: partial
+  - id: IA-5(1)
+    name: Phishing-Resistant Authenticators
+    implemented: no
+coverage_score: 0.625
+residual_risk_score: 6
+owner: CISO
+status: monitoring
+last_reviewed: 2026-05-28
