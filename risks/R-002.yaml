@@ -1,0 +1,33 @@
+risk_id: R-002
+title: Exploitation of public-facing SaaS application
+description: >
+  Attackers exploit a vulnerability in NimbusLedger's public-facing web
+  application (React/Node.js) to gain unauthorized access to backend
+  systems and customer financial data hosted on AWS RDS.
+business_impact: critical
+likelihood: medium
+impact_value: 5
+likelihood_value: 3
+inherent_risk_score: 15
+attack_techniques:
+  - id: T1190
+    name: Exploit Public-Facing Application
+    tactic: Initial Access (TA0001)
+mitigating_controls:
+  - id: SI-2
+    name: Flaw Remediation
+    implemented: partial
+  - id: RA-5
+    name: Vulnerability Monitoring and Scanning
+    implemented: yes
+  - id: SC-7
+    name: Boundary Protection
+    implemented: yes
+  - id: SI-10
+    name: Information Input Validation
+    implemented: partial
+coverage_score: 0.75
+residual_risk_score: 4
+owner: Engineering Lead
+status: monitoring
+last_reviewed: 2026-05-28
