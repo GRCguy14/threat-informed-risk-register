@@ -1,0 +1,33 @@
+risk_id: R-003
+title: Credential stuffing using valid accounts
+description: >
+  Attackers use credentials leaked from third-party breaches to log into
+  NimbusLedger customer or employee accounts, abusing valid access to
+  reach customer financial records without triggering malware defenses.
+business_impact: high
+likelihood: high
+impact_value: 4
+likelihood_value: 4
+inherent_risk_score: 16
+attack_techniques:
+  - id: T1078
+    name: Valid Accounts
+    tactic: Initial Access (TA0001)
+mitigating_controls:
+  - id: IA-2
+    name: Identification and Authentication
+    implemented: yes
+  - id: AC-2
+    name: Account Management
+    implemented: partial
+  - id: AC-6
+    name: Least Privilege
+    implemented: partial
+  - id: AU-12
+    name: Audit Record Generation
+    implemented: yes
+coverage_score: 0.75
+residual_risk_score: 4
+owner: CISO
+status: monitoring
+last_reviewed: 2026-05-28
