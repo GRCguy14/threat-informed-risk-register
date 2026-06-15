@@ -7,7 +7,7 @@
 
 | ID    | Title                                        | Tactic               | Impact   | Likelihood | Inherent | Coverage | Residual | Owner         | Status     |
 |-------|----------------------------------------------|----------------------|----------|------------|----------|----------|----------|---------------|------------|
-| R-001 | Phishing — credential theft                  | Initial Access       | High     | High       | 16       | 62.5%    | 6        | CISO          | Monitoring |
+| R-001 | Phishing - credential theft                  | Initial Access       | High     | High       | 16       | 62.5%    | 6        | CISO          | Monitoring |
 | R-002 | Exploit public-facing application            | Initial Access       | Critical | Medium     | 15       | 75%      | 4        | Eng Lead      | Monitoring |
 | R-003 | Credential stuffing via valid accounts       | Initial Access       | High     | High       | 16       | 75%      | 4        | CISO          | Monitoring |
 | R-004 | External remote service compromise           | Initial Access       | High     | Medium     | 12       | 83.3%    | 2        | Eng Lead      | Monitoring |
