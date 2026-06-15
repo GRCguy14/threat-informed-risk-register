@@ -1,0 +1,39 @@
+risk_id: R-008
+title: Privilege escalation via misconfigured AWS IAM role
+description: >
+  An attacker with limited AWS access exploits overly permissive IAM role
+  policies or misconfigured trust relationships to escalate privileges and
+  gain administrative access to NimbusLedger's production environment.
+business_impact: critical
+likelihood: medium
+impact_value: 5
+likelihood_value: 3
+inherent_risk_score: 15
+attack_techniques:
+  - id: T1078.004
+    name: Valid Accounts - Cloud Accounts
+    tactic: Privilege Escalation (TA0004)
+  - id: T1548
+    name: Abuse Elevation Control Mechanism
+    tactic: Privilege Escalation (TA0004)
+mitigating_controls:
+  - id: AC-6
+    name: Least Privilege
+    implemented: partial
+  - id: AC-2
+    name: Account Management
+    implemented: partial
+  - id: IA-2(1)
+    name: MFA for Privileged Accounts
+    implemented: yes
+  - id: AU-9
+    name: Protection of Audit Information
+    implemented: yes
+  - id: CM-6
+    name: Configuration Settings
+    implemented: partial
+coverage_score: 0.7
+residual_risk_score: 5
+owner: CISO
+status: monitoring
+last_reviewed: 2026-06-04
