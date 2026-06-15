@@ -1,0 +1,36 @@
+risk_id: R-006
+title: Malicious script execution via compromised endpoint
+description: >
+  An attacker who has gained access to a NimbusLedger employee endpoint
+  executes a malicious PowerShell or Bash script to establish persistence,
+  move laterally, or exfiltrate data from internal systems.
+business_impact: high
+likelihood: medium
+impact_value: 4
+likelihood_value: 3
+inherent_risk_score: 12
+attack_techniques:
+  - id: T1059
+    name: Command and Scripting Interpreter
+    tactic: Execution (TA0002)
+  - id: T1059.001
+    name: PowerShell
+    tactic: Execution (TA0002)
+mitigating_controls:
+  - id: CM-6
+    name: Configuration Settings
+    implemented: partial
+  - id: SI-3
+    name: Malicious Code Protection
+    implemented: partial
+  - id: AU-12
+    name: Audit Record Generation
+    implemented: yes
+  - id: CM-7
+    name: Least Functionality
+    implemented: no
+coverage_score: 0.5
+residual_risk_score: 6
+owner: Engineering Lead
+status: open
+last_reviewed: 2026-06-04
