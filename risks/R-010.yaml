@@ -1,0 +1,40 @@
+risk_id: R-010
+title: Customer PII exfiltration via misconfigured S3 bucket
+description: >
+  An attacker or misconfigured permission exposes a NimbusLedger S3 bucket
+  containing customer financial records to unauthorized access, resulting
+  in bulk exfiltration of PII and triggering GDPR, CCPA, and SOC 2
+  breach obligations.
+business_impact: critical
+likelihood: medium
+impact_value: 5
+likelihood_value: 3
+inherent_risk_score: 15
+attack_techniques:
+  - id: T1530
+    name: Data from Cloud Storage
+    tactic: Collection (TA0009)
+  - id: T1537
+    name: Transfer Data to Cloud Account
+    tactic: Exfiltration (TA0010)
+mitigating_controls:
+  - id: SC-28
+    name: Protection of Information at Rest
+    implemented: yes
+  - id: AC-3
+    name: Access Enforcement
+    implemented: partial
+  - id: AU-12
+    name: Audit Record Generation
+    implemented: yes
+  - id: RA-5
+    name: Vulnerability Monitoring and Scanning
+    implemented: yes
+  - id: IR-6
+    name: Incident Reporting
+    implemented: partial
+coverage_score: 0.8
+residual_risk_score: 3
+owner: CISO
+status: monitoring
+last_reviewed: 2026-06-04
