@@ -15,10 +15,10 @@ it (NIST 800-53), then scores how well-covered each risk actually is.
 
 ## Data model
 Each risk entry answers four questions:
-1. **What could go wrong?** — a specific, grounded scenario for NimbusLedger
-2. **How would an attacker do it?** — mapped to MITRE ATT&CK technique IDs
-3. **What defends against it?** — specific NIST 800-53 controls, rated yes / partial / no
-4. **How covered are we?** — a quantitative coverage score and residual risk score
+1. **What could go wrong?** - a specific, grounded scenario for NimbusLedger
+2. **How would an attacker do it?** - mapped to MITRE ATT&CK technique IDs
+3. **What defends against it?** - specific NIST 800-53 controls, rated yes / partial / no
+4. **How covered are we?** - a quantitative coverage score and residual risk score
 
 **Scoring logic:**
 - `coverage_score` = (yes × 1 + partial × 0.5 + no × 0) ÷ total controls
@@ -34,7 +34,7 @@ Run: `pip install pyyaml && python scripts/score_risks.py`
 
 | ID    | Title                                        | Tactic                  | Impact   | Likelihood | Inherent | Coverage | Residual | Status     |
 |-------|----------------------------------------------|-------------------------|----------|------------|----------|----------|----------|------------|
-| R-001 | Phishing — credential theft                  | Initial Access          | High     | High       | 16       | 62.5%    | 6        | Monitoring |
+| R-001 | Phishing - credential theft                  | Initial Access          | High     | High       | 16       | 62.5%    | 6        | Monitoring |
 | R-002 | Exploit public-facing application            | Initial Access          | Critical | Medium     | 15       | 75%      | 4        | Monitoring |
 | R-003 | Credential stuffing via valid accounts       | Initial Access          | High     | High       | 16       | 75%      | 4        | Monitoring |
 | R-004 | External remote service compromise           | Initial Access          | High     | Medium     | 12       | 83.3%    | 2        | Monitoring |
@@ -47,15 +47,15 @@ Run: `pip install pyyaml && python scripts/score_risks.py`
 
 ---
 
-## Sample risk walkthrough — R-001
+## Sample risk walkthrough - R-001
 
 **Scenario:** Attackers send phishing emails to NimbusLedger employees 
 targeting Okta SSO credentials. A successful compromise gives the attacker 
 authenticated access to the AWS console and customer financial data.
 
 **ATT&CK mapping:**
-- T1566 — Phishing (Initial Access, TA0001)
-- T1566.001 — Spearphishing Attachment
+- T1566 - Phishing (Initial Access, TA0001)
+- T1566.001 - Spearphishing Attachment
 
 **Controls mapped:**
 
@@ -71,7 +71,7 @@ authenticated access to the AWS console and customer financial data.
 - Coverage: (1 + 1 + 0.5 + 0) / 4 = **62.5%**
 - Residual risk: 16 × (1 − 0.625) = **6 / 25**
 
-**Recommendation:** Implement IA-5(1) — phishing-resistant authenticators 
+**Recommendation:** Implement IA-5(1) - phishing-resistant authenticators 
 (FIDO2 / hardware keys). This single control would raise coverage to 87.5% 
 and reduce residual risk from 6 to 2.
 
@@ -110,7 +110,7 @@ threat-informed-risk-register/
 
 ## Fictional company
 
-**NimbusLedger** — a B2B fintech SaaS company (80 employees, Wilmington DE) 
+**NimbusLedger** - a B2B fintech SaaS company (80 employees, Wilmington DE) 
 providing cloud-based accounting software to ~500 SMB clients. AWS-hosted 
 (us-east-1), Okta SSO, Splunk Cloud SIEM, SOC 2 Type II in progress.
 
@@ -130,5 +130,5 @@ Full profile: [docs/company-profile.md](docs/company-profile.md)
 
 ## Author
 
-**Om Satam** — MS Cybersecurity, University of Delaware  
+**Om Satam** - MS Cybersecurity, University of Delaware  
 [linkedin.com/in/om-satam](https://linkedin.com/in/om-satam) · [github.com/GRCguy14](https://github.com/GRCguy14)
