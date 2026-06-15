@@ -1,0 +1,36 @@
+risk_id: R-007
+title: Attacker establishes persistent backdoor via scheduled task
+description: >
+  After initial compromise, an attacker creates a scheduled task or cron
+  job on a NimbusLedger system to maintain persistent access that survives
+  reboots and credential resets.
+business_impact: high
+likelihood: medium
+impact_value: 4
+likelihood_value: 3
+inherent_risk_score: 12
+attack_techniques:
+  - id: T1053
+    name: Scheduled Task/Job
+    tactic: Persistence (TA0003)
+  - id: T1053.005
+    name: Scheduled Task (Windows)
+    tactic: Persistence (TA0003)
+mitigating_controls:
+  - id: CM-7
+    name: Least Functionality
+    implemented: no
+  - id: AU-12
+    name: Audit Record Generation
+    implemented: yes
+  - id: SI-7
+    name: Software, Firmware, and Information Integrity
+    implemented: partial
+  - id: IR-5
+    name: Incident Monitoring
+    implemented: partial
+coverage_score: 0.5
+residual_risk_score: 6
+owner: Engineering Lead
+status: open
+last_reviewed: 2026-06-04
