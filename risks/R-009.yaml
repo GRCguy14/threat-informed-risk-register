@@ -1,0 +1,40 @@
+risk_id: R-009
+title: Lateral movement via compromised internal service credentials
+description: >
+  An attacker who has compromised one internal system uses harvested service
+  account credentials or session tokens to move laterally across
+  NimbusLedger's AWS environment, reaching production databases and
+  customer PII.
+business_impact: critical
+likelihood: medium
+impact_value: 5
+likelihood_value: 3
+inherent_risk_score: 15
+attack_techniques:
+  - id: T1550.001
+    name: Application Access Token
+    tactic: Lateral Movement (TA0008)
+  - id: T1021
+    name: Remote Services
+    tactic: Lateral Movement (TA0008)
+mitigating_controls:
+  - id: AC-17
+    name: Remote Access
+    implemented: yes
+  - id: AC-6
+    name: Least Privilege
+    implemented: partial
+  - id: SC-7
+    name: Boundary Protection
+    implemented: yes
+  - id: AU-12
+    name: Audit Record Generation
+    implemented: yes
+  - id: IR-4
+    name: Incident Handling
+    implemented: partial
+coverage_score: 0.8
+residual_risk_score: 3
+owner: Engineering Lead
+status: monitoring
+last_reviewed: 2026-06-04
