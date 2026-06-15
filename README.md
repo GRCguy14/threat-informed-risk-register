@@ -91,21 +91,39 @@ and reduce residual risk from 6 to 2.
 
 ---
 
-## Repo structure
 
+## Repo structure
+```
 threat-informed-risk-register/
+│
 ├── risks/
-│   ├── R-001.yaml through R-010.yaml   - risk entries
-│   └── RISK-REGISTER.md                - consolidated table
-├── controls/                           - NIST 800-53 reference
-├── mappings/                           - ATT&CK ↔ 800-53 crosswalk
+│   ├── R-001.yaml                      - Phishing — credential theft
+│   ├── R-002.yaml                      - Exploit public-facing application
+│   ├── R-003.yaml                      - Credential stuffing via valid accounts
+│   ├── R-004.yaml                      - External remote service compromise
+│   ├── R-005.yaml                      - Third-party vendor trusted relationship
+│   ├── R-006.yaml                      - Malicious script execution on endpoint
+│   ├── R-007.yaml                      - Persistent backdoor via scheduled task
+│   ├── R-008.yaml                      - Privilege escalation via AWS IAM misconfiguration
+│   ├── R-009.yaml                      - Lateral movement via service account tokens
+│   ├── R-010.yaml                      - Customer PII exfiltration via S3 bucket
+│   └── RISK-REGISTER.md                - Consolidated risk table (all 10 entries)
+│
+├── controls/
+│   └── README.md                       - NIST 800-53 control families reference
+│
+├── mappings/
+│   └── README.md                       - ATT&CK ↔ NIST 800-53 crosswalk notes
+│
 ├── docs/
-│   ├── company-profile.md              - NimbusLedger fictional company
-│   ├── data-model.md                   - schema documentation
-│   └── glossary.md                     - plain-English reference
+│   ├── company-profile.md              - NimbusLedger fictional company profile
+│   ├── data-model.md                   - Schema documentation and scoring logic
+│   └── glossary.md                     - Plain-English reference for all codes
+│
 └── scripts/
-├── score_risks.py                  - coverage scoring engine
-└── results.json                    - latest scoring output
+    ├── score_risks.py                  - Automated coverage scoring engine
+    └── results.json                    - Latest scoring output
+```
 ---
 
 ## Fictional company
