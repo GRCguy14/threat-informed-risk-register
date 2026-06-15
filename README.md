@@ -1,6 +1,6 @@
 # Threat-Informed Risk Register (TIRR)
 
-Most risk registers describe risks in business terms — "unauthorized access," 
+Most risk registers describe risks in business terms - "unauthorized access," 
 "data breach," "insider threat." They rarely connect those risks to how 
 attackers actually operate, or to which specific controls reduce them.
 
