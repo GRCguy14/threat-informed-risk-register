@@ -14,7 +14,7 @@ OUTPUT_FILE = os.path.join(os.path.dirname(__file__), 'results.json')
 def score_controls(controls):
     if not controls:
         return 0.0
-    scores = {'yes': 1.0, 'partial': 0.5, 'no': 0.0}
+    scores = {'yes': 1.0, True: 1.0, 'partial': 0.5, 'no': 0.0, False: 0.0}
     total = sum(scores.get(c.get('implemented', 'no'), 0.0) for c in controls)
     return round(total / len(controls), 3)
 
